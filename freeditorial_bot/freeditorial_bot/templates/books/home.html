@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Libros descargados</h1>
+<ul>
+{% for book in books %}
+    <li>{{ book.title }}</li>
+{% empty %}
+    <li>No se ha descargado ningún libro todavía.</li>
+{% endfor %}
+</ul>
+{% endblock %}
